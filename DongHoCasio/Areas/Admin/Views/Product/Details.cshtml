@@ -1,0 +1,88 @@
+﻿@model DongHoCasio.Model.SanPham
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SanPham</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dd>
+            <img src="@Url.Content(Model.Hinh)" style="height:400px; width:400px;margin:10px" alt="Chua co Anh" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayThem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayThem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuongKho)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongKho)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuongBan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongBan)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaLoai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaLoai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TinhNang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TinhNang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MoTa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoTa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaSP }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

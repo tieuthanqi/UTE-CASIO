@@ -1,0 +1,75 @@
+﻿@model IEnumerable<DongHoCasio.Model.SanPham>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayThem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuongKho)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuongBan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TinhNang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MoTa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayThem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongKho)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongBan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TinhNang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MoTa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaSP }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaSP }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaSP })
+        </td>
+    </tr>
+}
+
+</table>

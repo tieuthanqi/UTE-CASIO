@@ -1,0 +1,153 @@
+﻿using DongHoCasio.Model;
+using DongHoCasio.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Script.Serialization;
+
+namespace DongHoCasio.Controllers
+{
+    public class CartController : Controller
+    {
+        DongHoCasioDbContext db = new DongHoCasioDbContext();
+        private const string CartSession = "CartSession";
+        // GET: Cart
+        public ActionResult Index()
+        {
+            var cart = Session[CartSession];
+            var list = new List<CartItem>();
+            if(cart != null)
+            {
+                list = (List<CartItem>)cart;
+            }
+            return View(list);
+        }
+        public JsonResult Update(string cartModel)
+        {
+            var jsonCart = new JavaScriptSerializer().Deserialize<List<CartItem>>(cartModel);
+            var sessionCart = (List < CartItem >)Session[CartSession]; 
+            foreach( var item in sessionCart)
+            {
+                var jsonItem = jsonCart.SingleOrDefault(x => x.SanPham.MaSP == item.SanPham.MaSP);
+                if(jsonItem != null)
+                {
+                    item.SoLuong = jsonItem.SoLuong;
+                }    
+            }
+            Session[CartSession] = sessionCart;
+            return Json(new
+            {
+                status = true
+            }) ;
+        }
+
+        public JsonResult DeleteAll()
+        {
+            Session[CartSession] = null;
+            return Json(new
+            {
+                status = true
+            });
+        }
+        public JsonResult Delete(string MaSP)
+        {
+            var sessionCart = (List<CartItem>)Session[CartSession];
+            sessionCart.RemoveAll(x => x.SanPham.MaSP == MaSP);
+            Session[CartSession] = sessionCart;
+            return Json(new
+            {
+                status = true
+            });
+        }
+        public ActionResult AddItem(string maSP, int soLuong)
+        {
+            SanPham sanpham = db.SanPhams.Find(maSP);
+            var cart = Session[CartSession];
+            if (cart != null)
+            {
+              
+                var list = (List<CartItem>)cart;
+                if( list.Exists(x => x.SanPham.MaSP ==maSP))
+                {
+                    foreach (var item in list)
+                    {
+                        if (item.SanPham.MaSP == maSP)
+                        {
+                            item.SoLuong += soLuong;
+                        }
+                    }
+                }
+                else
+                {
+                    //tao moi doi tuong cart item
+                    var item = new CartItem();
+                    item.SanPham = sanpham;
+                    item.SoLuong = soLuong;
+                    list.Add(item);
+                }
+                //Gan vao session
+                Session[CartSession] = list;
+            }
+            else
+            {
+                //tao moi doi tuong cart item
+                var item = new CartItem();
+                item.SanPham= sanpham;
+                item.SoLuong = soLuong;
+                var list = new List<CartItem>();
+                list.Add(item);
+                //Gan vao session
+                Session[CartSession] = list;
+            }
+            return RedirectToAction("Index");
+
+        }
+        public ActionResult ThanhToan()
+        {
+            var cart = Session[CartSession];
+            var list = new List<CartItem>();
+            if (cart != null)
+            {
+                list = (List<CartItem>)cart;
+            }
+            return View(list);
+           
+        }
+
+        [HttpPost]
+        public ActionResult ThanhToan(string HoTenKH, string DiaChi, string SDT, string Email )
+        {
+            DonHang donHang = new DonHang();
+            donHang.NgayMua = DateTime.Now;
+            donHang.HoTenKH = HoTenKH;
+            donHang.DiaChi = DiaChi;
+            donHang.SDT = SDT;
+            donHang.Email = Email;
+            var MaDH = new DonHangDAO().Insert(donHang);
+            var cart = (List<CartItem>)Session[CartSession];
+            var chiTietDAO = new ChiTietDonHangDAO();
+            foreach (var item in cart)
+            {
+                var chiTiet = new ChiTietDonHang();
+                chiTiet.MaSP = item.SanPham.MaSP;
+                chiTiet.MaDH = MaDH;
+                chiTiet.Gia = item.SanPham.Gia;
+                chiTiet.SoLuong = item.SoLuong;
+
+                chiTietDAO.Insert(chiTiet);
+            }
+           
+           
+            return Redirect("/hoan-thanh");
+
+        }
+
+        public ActionResult HoanThanh()
+        {
+            return View();
+        }
+       
+    }
+}
