@@ -1,6 +1,6 @@
-Create DATABASE CASIO
+Create DATABASE DONGHOCASIO
 
-use CASIO
+use DONGHOCASIO
 
 --Tạo bảng Loại Sản Phẩm
 Create table LoaiSanPham
@@ -18,7 +18,7 @@ Create table SanPham
 	SoLuongKho int,
 	SoLuongBan int,
 	MaLoai varchar(10) references LoaiSanPham(MaLoai),
-	Hinh image,
+	Hinh char(200),
 	TinhNang Ntext,
 	MoTa Ntext
 )
@@ -64,7 +64,7 @@ Create table DonHang
 --Tạo bảng Chi Tiết Đơn Hàng
 Create table ChiTietDonHang
 (
-	ID int indentity Primary key,
+	ID int identity Primary key,
 	MaDH int references DonHang(MaDH) ON DELETE SET NULL ON UPDATE CASCADE,
 	MaSP varchar(30) references SanPham(MaSP) ON DELETE SET NULL ON UPDATE CASCADE,
 	SoLuong int not null,
