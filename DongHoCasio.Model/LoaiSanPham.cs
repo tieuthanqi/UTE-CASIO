@@ -16,6 +16,7 @@ namespace DongHoCasio.Model
         }
 
         [Key]
+        [Required]
         [StringLength(10)]
         public string MaLoai { get; set; }
 

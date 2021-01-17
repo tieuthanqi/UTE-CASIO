@@ -1,10 +1,4 @@
-﻿@{
-    if (Session["userid"] == null)
-    {
-        Response.Redirect("/Admin/Home/Login");
-    }
-}
-
+﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +26,6 @@
     <link href="/Areas/Admin/Contents/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
     <!-- bootstrap-daterangepicker -->
     <link href="/Areas/Admin/Contents/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-
     <!-- Custom Theme Style -->
     <link href="/Areas/Admin/Contents/build/css/custom.min.css" rel="stylesheet">
 </head>
@@ -67,8 +60,8 @@
                         <div class="menu_section">
                             <h3>Danh mục quản lý</h3>
                             <ul class="nav side-menu">
-                                <li><a href="/Admin/Product/Index"><i class="fa fa-book"></i>Sản Phẩm</a></li>
-                                <li><a href="/Admin/LoaiSanPham/Index"><i class="fa fa-edit"></i>Loại Sản Phẩm</a></li>
+                                <li><a href="/Admin/Product/Index"><i class="mdi mdi-tent menu-icon"></i>Sản Phẩm</a></li>
+                                <li><a href="/Admin/LoaiSanPham/Index"><i class="mdi d-md-inline-block"></i>Loại Sản Phẩm</a></li>
                                 <li><a href="/Admin/DonHang/Index"><i class="fa fa-bar-chart"></i>Đơn hàng</a></li>
                                 <li><a href="/Admin/ChiTietDonHang/Index"><i class="fa fa-clone"></i>Chi Tiết Đơn Hàng</a></li>
                                 <li><a href="/Admin/KhuyenMai/Index"><i class="fa fa-cab"></i>Khuyến Mãi</a></li>
@@ -167,6 +160,11 @@
     <!-- bootstrap-daterangepicker -->
     <script src="/Areas/Admin/Contents/vendors/moment/min/moment.min.js"></script>
     <script src="/Areas/Admin/Contents/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <script src="~/Content/Bootstrap/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="~/Content/Bootstrap/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/Content/Bootstrap/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Content/Bootstrap/vendor/select2/select2.min.js"></script>
 
     <!-- Custom Theme Scripts -->
     @*<script src="/Areas/Admin/Contents/build/js/custom.min.js"></script>*@

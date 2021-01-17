@@ -19,6 +19,9 @@ namespace DongHoCasio.Model
 
         public int? PhanTram { get; set; }
 
+        [StringLength(30)]
+        public string TinhTrang { get; set; }
+
         public virtual KhuyenMai KhuyenMai { get; set; }
 
         public virtual SanPham SanPham { get; set; }

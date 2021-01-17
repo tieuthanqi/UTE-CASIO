@@ -2,62 +2,60 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
 }
 
-<h2>Index</h2>
+
+<h3>Trang Quản Lý Tài Khoản</h3>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Tạo Tài Khoản Mới", "Create", null, htmlAttributes: new { @class = "btn  btn-custome btn-outline-info btn-lg btn-sm "})
 </p>
+<hr />
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.UserName)
+            UserName
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Password)
+            PassWord
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Email)
+            Email
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SDT)
+            Số Điện Thoại
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Avatar)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Allowed)
+            Quyền
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Password)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SDT)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Avatar)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Allowed)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.UserID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.UserID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.UserID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SDT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Allowed)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.UserName }, htmlAttributes: new { @class = "btn-wide btn btn-success btn-sm" }) |
+                @Html.ActionLink("Chi Tiết", "Details", new { id = item.UserName }, htmlAttributes: new { @class = "btn badge-warning btn-sm" }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.UserName }, htmlAttributes: new { @class = "btn badge-danger btn-sm" })
+            </td>
+        </tr>
+    }
 
 </table>

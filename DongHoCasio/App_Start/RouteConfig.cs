@@ -19,6 +19,12 @@ namespace DongHoCasio
                defaults: new { controller = "Cart", action = "Index", id = UrlParameter.Optional },
                namespaces: new string[] { "DongHoCasio.Controllers" }
            );
+            routes.MapRoute(
+               name: "dang nhap",
+               url: "dang-nhap",
+               defaults: new { controller = "Home", action = "Login", id = UrlParameter.Optional },
+               namespaces: new string[] { "DongHoCasio.Controllers" }
+           );
 
 
             routes.MapRoute(
@@ -46,13 +52,6 @@ namespace DongHoCasio
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 namespaces: new string[] { "DongHoCasio.Controllers" }
             );
-
-            //    routes.MapRoute(
-            //    name: "Add Cart",
-            //    url: "them-gio-hang",
-            //    defaults: new { controller = "Cart", action = "AddItem", id = UrlParameter.Optional },
-            //    namespaces: new[] { "OnlineShop.Controllers" }
-            //);
 
         }
     }

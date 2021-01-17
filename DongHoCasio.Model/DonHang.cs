@@ -18,27 +18,30 @@ namespace DongHoCasio.Model
         [Key]
         public int MaDH { get; set; }
 
-        [Column(TypeName = "date")]
+        [Column(TypeName = "datetime")]
         public DateTime? NgayMua { get; set; }
 
         [Column(TypeName = "money")]
         public decimal? TongTien { get; set; }
 
+        [StringLength(100)]
+        public string UserName { get; set; }
+
         [Required]
-        [StringLength(30)]
+        [StringLength(100)]
         public string HoTenKH { get; set; }
 
-        [StringLength(100)]
+        [StringLength(500)]
         public string DiaChi { get; set; }
 
         [Required]
         [StringLength(10)]
         public string SDT { get; set; }
 
-        [StringLength(50)]
+        [StringLength(254)]
         public string Email { get; set; }
 
-        [StringLength(20)]
+        [StringLength(30)]
         public string TrangThai { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -16,7 +16,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link href="/Content/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="/Content/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <!-- font-awesome icons -->
+    <!--bootstraps-->
+    <link href="~/Content/Bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/vendor/animate/animate.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/vendor/select2/select2.min.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/css/util.css" rel="stylesheet" />
     <link href="/Content/css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/Bootstrap/css/main.css" rel="stylesheet" />
     <!-- //font-awesome icons -->
     <!-- js -->
     <script src="/Content/js/jquery-1.11.1.min.js"></script>
@@ -65,8 +72,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="mega-dropdown-menu">
                         <div class="w3ls_vegetables">
                             <ul class="dropdown-menu drp-mnu">
-                                <li><a href="login.html">Login</a></li>
-                                <li><a href="login.html">Sign Up</a></li>
+                                <li><a href="@Url.Action("Login", "Account")">Đăng Nhập</a></li>
+                                <li><a href="@Url.Action("Logout", "Account")">Đăng xuất</a></li>
                             </ul>
                         </div>
                     </div>
@@ -97,12 +104,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="logo_products">
         <div class="container">
             <div class="w3ls_logo_products_left">
-                <h1><a href="Index"><span>UTE</span> CASIO</a></h1>
+                <h1><a href="/Home/Index"><span>UTE</span> CASIO</a></h1>
             </div>
             <div class="w3ls_logo_products_left1">
                 <ul class="special_items">
                     <li><a href="@Url.Action("Index", "Home")">Trang chủ</a><i>/</i></li>
                     <li><a href="@Url.Action("About", "Home")">Thông Tin</a><i>/</i></li>
+                    <li><a href="#">Danh mục sản phẩm</a><i>/</i></li>
                     <li><a href="@Url.Action("SanPhamBanChay", "Home")">Sản phẩm bán chạy</a><i>/</i></li>
                     <li><a href="@Url.Action("SanPhamMoi", "Home")">Sản phẩm mới</a></li>
                 </ul>
@@ -207,6 +215,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="w3_footer_grid_list">
                     <li><a href="@Url.Action("Index", "Home")">Trang chủ</a></li>
                     <li><a href="@Url.Action("About", "Home")">Thông tin</a></li>
+                    <li><a href="#">Danh mục sản phẩm</a></li>
                     <li><a href="@Url.Action("SanPhamBanChay", "Home")">Sản Phẩm bán chạy</a></li>
                     <li><a href="@Url.Action("SanPhamMoi", "Home")">Sản Phẩm mới nhất</a></li>
 
@@ -278,6 +287,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- //footer -->
     <!-- Bootstrap Core JavaScript -->
     <script src="/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/Bootstrap/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="~/Content/Bootstrap/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/Content/Bootstrap/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Content/Bootstrap/vendor/select2/select2.min.js"></script>
+<script src="~/Content/Bootstrap/js/main.js"></script>
     <script>
         $(document).ready(function () {
             $(".dropdown").hover(

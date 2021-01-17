@@ -20,7 +20,8 @@ namespace DongHoCasio.Controllers
         }
         public ActionResult SanPhamBanChay()
         {
-            ViewBag.TrangSanPhamBanChay = db.SanPhams.OrderByDescending(x => x.SoLuongBan).Take(100).ToList();
+           
+            ViewBag.SanPhamBanChay = db.SanPhams.OrderByDescending(x => x.SoLuongBan).Take(100).ToList();
 
             return View();
         }

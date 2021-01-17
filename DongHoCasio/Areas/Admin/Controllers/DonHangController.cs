@@ -46,8 +46,10 @@ namespace DongHoCasio.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaDH,NgayMua,TongTien,HoTenKH,DiaChi,SDT,Email,TrangThai")] DonHang donHang)
+        public ActionResult Create([Bind(Include = "MaDH,NgayMua,TongTien,UserName,HoTenKH,DiaChi,SDT,Email,TrangThai")] DonHang donHang)
         {
+            string tt = Request.Form["trangthai"];
+            donHang.TrangThai = tt;
             if (ModelState.IsValid)
             {
                 db.DonHangs.Add(donHang);
@@ -78,8 +80,11 @@ namespace DongHoCasio.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MaDH,NgayMua,TongTien,HoTenKH,DiaChi,SDT,Email,TrangThai")] DonHang donHang)
+        public ActionResult Edit([Bind(Include = "MaDH,NgayMua,TongTien,UserName,HoTenKH,DiaChi,SDT,Email,TrangThai")] DonHang donHang)
         {
+            string tt = Request.Form["trangthai"];
+            donHang.TrangThai = tt;
+
             if (ModelState.IsValid)
             {
                 db.Entry(donHang).State = EntityState.Modified;

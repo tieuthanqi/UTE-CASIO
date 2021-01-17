@@ -39,8 +39,8 @@ namespace DongHoCasio.Areas.Admin.Controllers
         // GET: Admin/ChiTietDonHang/Create
         public ActionResult Create()
         {
-            ViewBag.MaDH = new SelectList(db.DonHangs, "MaDH", "HoTenKH");
-            ViewBag.MaSP = new SelectList(db.SanPhams, "MaSP", "MaLoai");
+            ViewBag.MaDH = new SelectList(db.DonHangs, "MaDH", "MaDH");
+            ViewBag.MaSP = new SelectList(db.SanPhams, "MaSP", "MaSP");
             return View();
         }
 
@@ -58,8 +58,8 @@ namespace DongHoCasio.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.MaDH = new SelectList(db.DonHangs, "MaDH", "HoTenKH", chiTietDonHang.MaDH);
-            ViewBag.MaSP = new SelectList(db.SanPhams, "MaSP", "MaLoai", chiTietDonHang.MaSP);
+            ViewBag.MaDH = new SelectList(db.DonHangs, "MaDH", "MaDH", chiTietDonHang.MaDH);
+            ViewBag.MaSP = new SelectList(db.SanPhams, "MaSP", "MaSP", chiTietDonHang.MaSP);
             return View(chiTietDonHang);
         }
 
@@ -75,8 +75,8 @@ namespace DongHoCasio.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.MaDH = new SelectList(db.DonHangs, "MaDH", "HoTenKH", chiTietDonHang.MaDH);
-            ViewBag.MaSP = new SelectList(db.SanPhams, "MaSP", "MaLoai", chiTietDonHang.MaSP);
+            ViewBag.MaDH = new SelectList(db.DonHangs, "MaDH", "MaDH", chiTietDonHang.MaDH);
+            ViewBag.MaSP = new SelectList(db.SanPhams, "MaSP", "MaSP", chiTietDonHang.MaSP);
             return View(chiTietDonHang);
         }
 
@@ -85,7 +85,7 @@ namespace DongHoCasio.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,MaDH,MaSP,SoLuong,Gia")] ChiTietDonHang chiTietDonHang)
+        public ActionResult Edit(ChiTietDonHang chiTietDonHang)
         {
             if (ModelState.IsValid)
             {
@@ -93,8 +93,8 @@ namespace DongHoCasio.Areas.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.MaDH = new SelectList(db.DonHangs, "MaDH", "HoTenKH", chiTietDonHang.MaDH);
-            ViewBag.MaSP = new SelectList(db.SanPhams, "MaSP", "MaLoai", chiTietDonHang.MaSP);
+            ViewBag.MaDH = new SelectList(db.DonHangs, "MaDH", "MaDH", chiTietDonHang.MaDH);
+            ViewBag.MaSP = new SelectList(db.SanPhams, "MaSP", "MaSP", chiTietDonHang.MaSP);
             return View(chiTietDonHang);
         }
 

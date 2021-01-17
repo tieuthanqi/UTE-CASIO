@@ -2,17 +2,15 @@
 
 @{
     ViewBag.Title = "Create";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
 }
-
-<h2>Create</h2>
-
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
 <div class="form-horizontal">
+    <h3>Tạo Tài Khoản Mới</h3>
     <hr />
 
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -24,13 +22,7 @@
                 @html.validationmessagefor(model => model.username, "", new { @class = "text-danger" })
             </div>
         </div>*@
-    <div class="form-group">
-        @Html.LabelFor(model => model.UserID, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.UserID, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
-        </div>
-    </div>
+
     <div class="form-group">
         @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
@@ -73,21 +65,24 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Allowed, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.Allowed, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Allowed, "", new { @class = "text-danger" })
+            <select name="allowed" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
         </div>
     </div>
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-default" />
+            <input type="submit" value="Tạo tài khoản" class="btn btn-primary btn-sm" />
         </div>
     </div>
 </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Trở về", "Index")
 </div>
 
 @section Scripts {

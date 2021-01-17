@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using DongHoCasio.Model;
+using DongHoCasio.Models;
 using Microsoft.AspNetCore.Http;
 
 namespace DongHoCasio.Areas.Admin.Controllers
@@ -54,41 +55,49 @@ namespace DongHoCasio.Areas.Admin.Controllers
         [HttpPost]
         //[ValidateAntiForgeryToken]
         public ActionResult Create (SanPham sanPham )
-        { 
+        {
+            string a = Request.Form["tinhtrang"];
+            sanPham.TinhTrang = a;
+            
+            if (sanPham.NgayThem == null)
+                sanPham.NgayThem = DateTime.Now;
             if (sanPham.ImageUpload != null)
             {
-
                 //string wwwfilesPath = @"D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio\Areas\Admin\Images\";
                 string fileName = Path.GetFileNameWithoutExtension(sanPham.ImageUpload.FileName);
                 string extension = Path.GetExtension(sanPham.ImageUpload.FileName);
                 fileName = fileName + extension;
                 sanPham.Hinh = "/Areas/Admin/Contents/Images/" + fileName;
                 sanPham.ImageUpload.SaveAs(Path.Combine(Server.MapPath("/Areas/Admin/Contents/Images/"), fileName));
-                //if (sanPham.Hinh != null)
-                //{
-                //    // edit 
-                //    var imagePath = Path.Combine(wwwfilesPath, account.Image.TrimStart('\\'));
-                //    if (System.IO.File.Exists(imagePath))
-                //    {
-                //        System.IO.File.Delete(imagePath);
-                //    }
-
-                //}
-                
+               
             }
             db.SanPhams.Add(sanPham);
 
             if (ModelState.IsValid)
             {
-                db.SanPhams.Add(sanPham);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                try
+                {
+                    db.SanPhams.Add(sanPham);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch
+                {
+                    Console.Write("Mời nhập đầy đủ thông tin");
+                }
             }
 
-            ViewBag.MaLoai = new SelectList(db.LoaiSanPhams, "MaLoai", "TinhTrang", sanPham.MaLoai);
+            ViewBag.MaLoai = new SelectList(db.LoaiSanPhams, "MaLoai", "MaLoai", sanPham.MaLoai);
+
+            //List<SelectListItem> TinhTrangItems = new List<SelectListItem>();
+            //TinhTrangItems.AddRange(new[] {
+            //    new SelectListItem() { Text = "Hoạt động", Value = "Hoạt động" },
+            //    new SelectListItem() { Text = "Ngưng hoạt động", Value = "Ngưng hoạt động" },
+            //    }
+            //);
+            //ViewBag.TinhTrang = TinhTrangItems;
             return View();
         }
-
         // GET: Admin/Product/Edit/5
         public ActionResult Edit(string id)
         {
@@ -124,6 +133,8 @@ namespace DongHoCasio.Areas.Admin.Controllers
                 sanPham.ImageUpload.SaveAs(Path.Combine(Server.MapPath("/Areas/Admin/Contents/Images/"), fileName));
                
             }
+            string a = Request.Form["tinhtrang"];
+            sanPham.TinhTrang = a;
 
             if (ModelState.IsValid)
             {

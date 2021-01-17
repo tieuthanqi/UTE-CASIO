@@ -48,11 +48,16 @@ namespace DongHoCasio.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "MaLoai,TinhTrang")] LoaiSanPham loaiSanPham)
         {
+            string tt = Request.Form["tinhtrang"];
+            loaiSanPham.TinhTrang = tt;
+
             if (ModelState.IsValid)
             {
-                db.LoaiSanPhams.Add(loaiSanPham);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+               
+                    db.LoaiSanPhams.Add(loaiSanPham);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+               
             }
 
             return View(loaiSanPham);
@@ -66,6 +71,10 @@ namespace DongHoCasio.Areas.Admin.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             LoaiSanPham loaiSanPham = db.LoaiSanPhams.Find(id);
+
+            string tt = Request.Form["tinhtrang"];
+            loaiSanPham.TinhTrang = tt;
+
             if (loaiSanPham == null)
             {
                 return HttpNotFound();

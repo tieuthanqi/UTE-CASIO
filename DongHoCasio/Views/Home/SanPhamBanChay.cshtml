@@ -1,15 +1,22 @@
-﻿@using DongHoCasio.Model;
+﻿
+@using DongHoCasio.Model;
 @{
-    ViewBag.Title = "SanPhamBanChay";
-    List<SanPham> listTrangSanPhamMoi = ViewBag.TrangSanPhamBanChay;
+    ViewBag.Title = "Home Page";
+    
+    List<SanPham> listSanPhamBanChay = ViewBag.SanPhamBanChay;
+
 }
+
+
+
+<!--Sản phẩm bán chạy-->
 
 <div class="top-brands">
     <div class="container">
         <h3>Sản Phẩm bán chạy</h3>
         <div class="agile_top_brands_grids">
 
-            @foreach (var item in listTrangSanPhamMoi)
+            @foreach (var item in listSanPhamBanChay)
             {
                 <div class="col-md-3 top_brand_left">
                     <div class="hover14 column">
@@ -20,13 +27,11 @@
                                     <div class="snipcart-item block">
                                         <div class="snipcart-thumb">
                                             <a href="@Url.Action("Details", "Home", new { id = item.MaSP})"><img title=" " alt="Chưa tải được sách " src="@Url.Content(item.Hinh)" class="img-responsive" /></a>
-
-
                                             <p>@item.MaSP</p>
-                                            <h4>@item.Gia</h4>
+                                            <h4>@item.Gia.ToString("N0")</h4>
                                         </div>
                                         <div class="snipcart-details top_brand_home_details">
-                                            <form action="/them-gio-hang?maSP=@Model.MaSP&soLuong=1" method="post">
+                                            <form action="/them-gio-hang?maSP=@item.MaSP&soLuong=1" method="post">
                                                 <fieldset>
                                                     <input type="submit" name="submit" value="Thêm vào giỏ" class="button" />
                                                 </fieldset>
@@ -49,4 +54,5 @@
         </div>
     </div>
 </div>
+
 

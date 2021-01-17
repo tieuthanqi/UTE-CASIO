@@ -19,9 +19,6 @@ namespace DongHoCasio.Models
             db.ChiTietDonHangs.Add(chiTiet);
             db.SaveChanges();
             return true;
-
-
-
         }
     }
 }

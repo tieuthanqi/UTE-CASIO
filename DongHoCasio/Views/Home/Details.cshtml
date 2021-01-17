@@ -38,7 +38,7 @@
 
         <div class="snipcart-item block">
             <div class="snipcart-thumb agileinfo_single_right_snipcart">
-                <h3>Đơn giá:</h3><br /><h4>@Model.Gia </h4>
+                <h3>Đơn giá:</h3><br /><h4>@Model.Gia.ToString("N0") </h4>
             </div>
             <div class="snipcart-details agileinfo_single_right_details">
                 <form action="/them-gio-hang?maSP=@Model.MaSP&soLuong=1" method="post">

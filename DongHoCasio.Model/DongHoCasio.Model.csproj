@@ -76,6 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CartItem.cs" />
     <Compile Include="ChiTietDonHang.cs" />
     <Compile Include="CTKM.cs" />
     <Compile Include="DongHoCasioDbContext.cs" />

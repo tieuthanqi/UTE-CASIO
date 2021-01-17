@@ -18,14 +18,17 @@ namespace DongHoCasio.Model
         [Key]
         public int MaKM { get; set; }
 
-        [Column(TypeName = "date")]
+        [Column(TypeName = "datetime")]
         public DateTime? ThoiGianBD { get; set; }
 
-        [Column(TypeName = "date")]
+        [Column(TypeName = "datetime")]
         public DateTime? ThoiGianKT { get; set; }
 
         [StringLength(200)]
         public string TenCTKM { get; set; }
+
+        [StringLength(30)]
+        public string TinhTrang { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTKM> CTKMs { get; set; }

@@ -1,4 +1,12 @@
-﻿@model List<DongHoCasio.Models.CartItem>
+﻿@{
+    if (Session["username"] == null)//Nếu chưa đăng nhập
+    {
+        //Thì sẽ chuyển đến trang Login
+        Response.Redirect("/Account/Login");
+    }
+}
+
+@model List<DongHoCasio.Model.CartItem>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -43,7 +51,8 @@
         <div class="col-md-6" style="text-align:center">
             @using (Html.BeginForm("ThanhToan", "Cart", FormMethod.Post))
             {
-                <div class="form-group" >
+
+                <div class="form-group">
                     <label>Người Nhận</label>
                     <input name="HoTenKH" class="form-control" />
                 </div>
@@ -62,7 +71,7 @@
                 <button type="submit" class="btn">Đặt hàng</button>
             }
         </div>
-       
+
     </div>
 
 </div>

@@ -24,17 +24,42 @@
 
 
                                             <p>@item.MaSP</p>
-                                            <h4>@item.Gia</h4>
-                                        </div>
-                                        <div class="snipcart-details top_brand_home_details">
-                                            <form action="/them-gio-hang?maSP=@Model.MaSP&soLuong=1" method="post">
-                                                <fieldset>
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
+                                            <h4>@item.Gia.ToString("N0")</h4>
 
-                                            </form>
+                                            @*<div class="add-cart">
+                                                    <h4><a href="/them-gio-hang?maSP=@item.MaSP&soLuong=1">Thêm vào giỏ</a></h4>
+                                                </div>*@
 
+                                            <div class="snipcart-details top_brand_home_details">
+                                                <form action="/them-gio-hang?maSP=@item.MaSP&soLuong=1" method="post">
+                                                    <fieldset>
+                                                        <input type="submit" name="submit" value="Thêm vào giỏ" class="button" />
+                                                    </fieldset>
+
+                                                </form>
+
+                                            </div>
                                         </div>
+                                        @*<div class="snipcart-details top_brand_home_details">
+                                                <form action="checkout.html" method="post">
+                                                    <fieldset>
+                                                        <input type="hidden" name="cmd" value="_cart" />
+                                                        <input type="hidden" name="add" value="1" />
+                                                        <input type="hidden" name="business" value=" " />
+                                                        <input type="hidden" name="item_name" value="Fortune Sunflower Oil" />
+                                                        <input type="hidden" name="amount" value="7.99" />
+                                                        <input type="hidden" name="discount_amount" value="1.00" />
+                                                        <input type="hidden" name="currency_code" value="USD" />
+                                                        <input type="hidden" name="return" value=" " />
+                                                        <input type="hidden" name="cancel_return" value=" " />
+                                                        <input type="submit" name="submit" value="Add to cart" class="button" />
+                                                    </fieldset>
+
+                                                </form>
+
+                                            </div>*@
+
+
                                     </div>
                                 </figure>
                             </div>

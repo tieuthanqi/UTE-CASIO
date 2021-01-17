@@ -2,17 +2,18 @@
 
 @{
     ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
 }
 
-<h2>Details</h2>
+
 
 <div>
-    <h4>DonHang</h4>
+    <h4>Chi Tiết Thông Tin Đơn Hàng</h4>
     <hr />
     <dl class="dl-horizontal">
 
         <dt>
-            @Html.DisplayNameFor(model => model.MaDH)
+            Mã Đơn Hàng
         </dt>
 
         <dd>
@@ -20,7 +21,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NgayMua)
+            Ngày Mua
         </dt>
 
         <dd>
@@ -28,15 +29,22 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TongTien)
+            Tổng Tiền
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.TongTien)
         </dd>
+        <dt>
+            UserName
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.HoTenKH)
+            Người Nhận
         </dt>
 
         <dd>
@@ -44,7 +52,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DiaChi)
+            Địa Chỉ
         </dt>
 
         <dd>
@@ -52,7 +60,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SDT)
+            Số Điện Thoại
         </dt>
 
         <dd>
@@ -60,7 +68,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Email)
+            Email
         </dt>
 
         <dd>
@@ -68,7 +76,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TrangThai)
+            Trạng Thái Đơn Hàng
         </dt>
 
         <dd>
@@ -78,6 +86,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MaDH }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.MaDH }, htmlAttributes: new { @class = "btn-wide btn btn-success btn-sm" }) |
+    @Html.ActionLink("Trở về", "Index")
 </p>

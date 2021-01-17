@@ -24,7 +24,7 @@ namespace DongHoCasio.Areas.Admin.Controllers
         }
 
         // GET: Admin/User/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(string id)
         {
             if (id == null)
             {
@@ -52,8 +52,9 @@ namespace DongHoCasio.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "UserID,UserName,Password,Email,SDT,Avatar,Allowed")] User user)
         {
-            
-        
+            string allowed = Request.Form["allowed"];
+            user.Allowed = int.Parse(allowed);
+
             if (ModelState.IsValid)
             {
                 db.Users.Add(user);
@@ -65,7 +66,7 @@ namespace DongHoCasio.Areas.Admin.Controllers
         }
 
         // GET: Admin/User/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(string id)
         {
             if (id == null)
             {
@@ -86,6 +87,9 @@ namespace DongHoCasio.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "UserID,UserName,Password,Email,SDT,Avatar,Allowed")] User user)
         {
+            string allowed = Request.Form["allowed"];
+            user.Allowed = int.Parse(allowed);
+
             if (ModelState.IsValid)
             {
                 db.Entry(user).State = EntityState.Modified;
@@ -96,7 +100,7 @@ namespace DongHoCasio.Areas.Admin.Controllers
         }
 
         // GET: Admin/User/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(string id)
         {
             if (id == null)
             {
@@ -113,7 +117,7 @@ namespace DongHoCasio.Areas.Admin.Controllers
         // POST: Admin/User/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
             User user = db.Users.Find(id);
             db.Users.Remove(user);

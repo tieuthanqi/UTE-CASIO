@@ -19,13 +19,14 @@ namespace DongHoCasio.Model
         }
 
         [Key]
+        [Required]
         [StringLength(30)]
         public string MaSP { get; set; }
 
         [Column(TypeName = "money")]
         public decimal Gia { get; set; }
 
-        [Column(TypeName = "date")]
+        [Column(TypeName = "datetime")]
         public DateTime? NgayThem { get; set; }
 
         public int? SoLuongKho { get; set; }
@@ -35,7 +36,10 @@ namespace DongHoCasio.Model
         [StringLength(10)]
         public string MaLoai { get; set; }
 
-        [StringLength(200)]
+        [StringLength(30)]
+        public string TinhTrang { get; set; }
+
+        [StringLength(500)]
         public string Hinh { get; set; }
 
         [Column(TypeName = "ntext")]
