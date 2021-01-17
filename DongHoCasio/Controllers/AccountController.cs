@@ -49,23 +49,22 @@ namespace DongHoCasio.Controllers
         }
         public ActionResult SingUp()
         {
-            return View();
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult SignUp([Bind(Include = "UserID,UserName,Password,Email,SDT,Avatar,Allowed")] User user)
-        {
-            user.Allowed = 1;
+            User user = new User();
+            user.UserName = Request.Form["username"].ToString();
+            user.Email = Request.Form["Email"].ToString();
+            string pass = Request.Form["password"];
+            user.Password = pass;
+            user.Allowed = 0;
             if (ModelState.IsValid)
             {
                 db.Users.Add(user);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Login");
             }
 
-            return View();
+            return Redirect("/");
+          
         }
-
 
         public ActionResult Logout()
         {

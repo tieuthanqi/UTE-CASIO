@@ -54,6 +54,15 @@
             @Html.DisplayFor(model => model.Allowed)
         </dd>
     </dl>
+    <dl>
+        <dt>
+            Tình Trạng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+    </dl>
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()

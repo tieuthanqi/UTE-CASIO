@@ -4,44 +4,106 @@
 }
 
 <!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Đăng nhập</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Striking Dual form a Flat Responsive Widget Template :: w3layouts</title>
+    <link rel="stylesheet" href="~/Content/login-singup/css/style.css">
+    <link href="~/Content/login-singup/css/popup-box.css" rel="stylesheet" type="text/css" media="all" />
+    <!--Web-fonts-->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
+    <!--//Web-fonts-->
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="DangNhap" />
+    <meta name="keywords" content="Striking Dual form  Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <link href="~/Content/css-login/style.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="//fonts.googleapis.com/css?family=Cormorant+SC:300,400,500,600,700" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <!-- //Meta tag Keywords -->
 </head>
-
 <body>
-    <div class="padding-all">
-        <div class="header">
-            <h1>Đăng nhập</h1>
-        </div>
-
-        <div class="design-w3l">
-            <div class="mail-form-agile">
-                <form action="/Account/Login" method="post">
-                    <input type="text" name="username" placeholder="Nhập UserName hoặc Email" required="" />
-                    <input type="password" name="password" class="padding" placeholder="Nhập mật khẩu" required="" />
-                    <input type="submit" value="Đăng Nhập">
-                </form>
-            </div>
-            @*@Html.Action("Tạo Tài Khoản Mới", "")*@
-            <div class="clear"> </div>
-        </div>
-
-  
-    </div>
+	<h1>Striking Dual form</h1>
+	<div class="w3layouts">
+	<!-- Sign in -->
+		<div class="signin-agile">
+			<h2>Đăng Nhập</h2>
+			<label class="bar-w3-agile"></label>
+			<form action="/Account/Login" method="post">
+				<p>Username</p>
+				<input type="text" name="username" class="name" placeholder="" required="" />
+				<p>Password</p>
+				<input type="password" name="password" class="password" placeholder="" required="" />
+				<ul>
+					<li>
+						<input type="checkbox" id="brand1" value="">
+						<label for="brand1"><span></span>Lưu mật khẩu</label>
+					</li>
+				</ul>
+				<a href="#">Quên mật khẩu</a><br>
+				<div class="clear"></div>
+				<input type="submit" value="Login">
+			</form>
+		</div>
+	<!-- //Sign in -->
+	<!-- Sign up -->
+		<div class="signup-agileinfo">
+			<h3>Đăng kí</h3>
+			<label class="bar-w3-agile"></label>
+			<p>Cảm ơn quý đã quan tâm và chọn mua ở hàng UTE-CASIO chúng tôi</p>
+			<h6>Bằng cách tạo tài khoản quý khách đã đồng ý với mọi<a href="#">điều khoản của UTE-CASIO</a></h6>
+			<!-- Pop up -->
+				<div class="more">
+					<a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s" href="#small-dialog">Đăng kí</a>				
+				</div>
+			<!-- //Pop up -->
+		</div>
+	<!-- //Sign up -->
+		<div class="clear"></div>
+	</div>
+	<div class="footer-w3l">
+		<p class="agileinfo"> &copy; 2017 Striking Dual form . All Rights Reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+	</div>
+	<!-- Pop up -->
+	<div class="pop-up"> 
+	<div id="small-dialog" class="mfp-hide book-form">
+		<h3>Sign Up Form </h3>
+			<form action="@Url.Action("Singup", "Account")" method="post">
+				<p>Tên đăng nhập</p>
+				<input type="text" name="username" placeholder="" required=""/>
+				<p>Email</p>
+				<input type="email" name="Email" class="email" placeholder="" required=""/>
+				<p>Mật khẩu</p>
+				<input type="password" name="password" class="password" placeholder="" required=""/>
+				<p>Xác nhận mật khẩu</p>
+				<input type="password" name="Password1" class="password" placeholder="" required=""/>					
+				<input type="submit" value="Đăng kí">
+			</form>
+	</div>
+</div>	
+<!-- // Pop up -->
+<script type="text/javascript" src="~/Content/login-singup/js/jquery-2.1.4.min.js"></script>
+<script src="~/Content/login-singup/js/jquery.magnific-popup.js" type="text/javascript"></script>
+<script type="text/javascript" src="~/Content/login-singup/js/modernizr.custom.53451.js"></script> 
+ <script>
+						$(document).ready(function() {
+						$('.popup-with-zoom-anim').magnificPopup({
+							type: 'inline',
+							fixedContentPos: false,
+							fixedBgPos: true,
+							overflowY: 'auto',
+							closeBtnInside: true,
+							preloader: false,
+							midClick: true,
+							removalDelay: 300,
+							mainClass: 'my-mfp-zoom-in'
+						});
+																						
+						});
+</script>
 </body>
 </html>

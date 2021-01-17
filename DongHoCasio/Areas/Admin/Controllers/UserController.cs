@@ -89,7 +89,8 @@ namespace DongHoCasio.Areas.Admin.Controllers
         {
             string allowed = Request.Form["allowed"];
             user.Allowed = int.Parse(allowed);
-
+            user.Status = Request.Form["status"].ToString();
+  
             if (ModelState.IsValid)
             {
                 db.Entry(user).State = EntityState.Modified;

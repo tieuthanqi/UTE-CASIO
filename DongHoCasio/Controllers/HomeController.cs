@@ -10,6 +10,8 @@ namespace DongHoCasio.Controllers
 {
     public class HomeController : Controller
     {
+        
+        
         DongHoCasioDbContext db = new DongHoCasioDbContext();
         public ActionResult Index()
         {
