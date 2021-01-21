@@ -1,0 +1,70 @@
+﻿@model DongHoCasio.Model.SanPham
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div>
+    <h3>Bạn có muốn xóa sản phẩm ?</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt></dt>
+        <dd>
+
+            <img src="@Url.Content(Model.Hinh)" style="height:200px; width:200px;margin:10px" alt="Chưa Có Ảnh" />
+        </dd>
+
+        <dt>
+            Mã Sản Phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaSP)
+        </dd>
+
+        <dt>
+            Giá
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia)
+        </dd>
+
+        <dt>
+            Ngày thêm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayThem)
+        </dd>
+
+        <dt>
+            Số Lượng Còn
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongKho)
+        </dd>
+
+        <dt>
+            Số Lượng Bán
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongBan)
+        </dd>
+
+    </dl>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn badge-danger" /> |
+            @Html.ActionLink("Trở về", "Index")
+        </div>
+
+    }
+
+</div>

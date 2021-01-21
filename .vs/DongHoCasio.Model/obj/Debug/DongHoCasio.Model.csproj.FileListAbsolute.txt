@@ -1,0 +1,56 @@
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\DongHoCasio.Model.dll.config
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\DongHoCasio.Model.dll
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\DongHoCasio.Model.pdb
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\EntityFramework.dll
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\EntityFramework.xml
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\obj\Debug\DongHoCasio.Model.csprojAssemblyReference.cache
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\obj\Debug\DongHoCasio.Model.csproj.CoreCompileInputs.cache
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\obj\Debug\DongHoCasio.Model.csproj.CopyComplete
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\obj\Debug\DongHoCasio.Model.dll
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\obj\Debug\DongHoCasio.Model.pdb
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\Microsoft.AspNetCore.Http.Features.dll
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\System.Buffers.dll
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\System.IO.Pipelines.dll
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\System.Memory.dll
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\System.Numerics.Vectors.dll
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\Microsoft.AspNetCore.Http.Features.xml
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\System.Buffers.xml
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\System.IO.Pipelines.xml
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\System.Memory.xml
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\System.Numerics.Vectors.xml
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\ThuongMaiDienTu\DoAn\DongHoCasio\DongHoCasio.Model\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\DongHoCasio.Model.dll.config
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\DongHoCasio.Model.dll
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\DongHoCasio.Model.pdb
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\EntityFramework.dll
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\System.Buffers.dll
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\System.IO.Pipelines.dll
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\System.Memory.dll
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\EntityFramework.xml
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\System.Buffers.xml
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\System.IO.Pipelines.xml
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\System.Memory.xml
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\obj\Debug\DongHoCasio.Model.csprojAssemblyReference.cache
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\obj\Debug\DongHoCasio.Model.csproj.CoreCompileInputs.cache
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\obj\Debug\DongHoCasio.Model.csproj.CopyComplete
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\obj\Debug\DongHoCasio.Model.dll
+C:\Users\BUI PHI\Downloads\UTE-CASIO-master (2)\UTE-CASIO-master\DongHoCasio.Model\obj\Debug\DongHoCasio.Model.pdb
