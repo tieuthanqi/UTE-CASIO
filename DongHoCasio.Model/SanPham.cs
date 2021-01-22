@@ -48,6 +48,10 @@ namespace DongHoCasio.Model
         [Column(TypeName = "ntext")]
         public string MoTa { get; set; }
 
+        [Column(TypeName = "money")]
+        public decimal GiamGia { get; set; }
+
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTKM> CTKMs { get; set; }
 

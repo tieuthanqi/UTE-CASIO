@@ -34,6 +34,10 @@ background: url("../images/login.jpg") 0px 0px no-repeat;
 background-size:cover;
 background-attachment: fixed;
 }
+.strong {
+    font-weight: bold;
+    text-decoration: line-through;
+}
 .padding-all{
 padding:100px;
 }

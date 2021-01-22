@@ -168,6 +168,7 @@
     <Compile Include="Areas\Shipper\ShipperAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\CartKhuyenMaiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -3773,11 +3774,6 @@
     <Content Include="Areas\Admin\Views\Product\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\KhuyenMai\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\KhuyenMai\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\KhuyenMai\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\KhuyenMai\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\KhuyenMai\Index.cshtml" />
     <Content Include="Areas\Admin\Views\CTKM\Create.cshtml" />
     <Content Include="Areas\Admin\Views\CTKM\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\CTKM\Details.cshtml" />
@@ -4706,6 +4702,11 @@
     <Content Include="Areas\Shipper\Views\DonHangShipper\Index.cshtml" />
     <Content Include="Content\login-singup\fonts\Asap-Regular.ttf" />
     <Content Include="Content\login-singup\fonts\Audiowide-Regular.ttf" />
+    <Content Include="Areas\Admin\Views\KhuyenMai\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\KhuyenMai\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\KhuyenMai\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\KhuyenMai\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\KhuyenMai\Delete.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -4740,6 +4741,10 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Shared\_LayoutPage.cshtml" />
     <Content Include="Views\Account\SingUp.cshtml" />
+    <Content Include="Views\Home\SanPhamKhuyenMai.cshtml" />
+    <Content Include="Views\Home\DetailsKhuyenMai.cshtml" />
+    <Content Include="Views\CartKhuyenMai\IndexKhuyenMai.cshtml" />
+    <Content Include="Views\CartKhuyenMai\ThanhToanKhuyenMai.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

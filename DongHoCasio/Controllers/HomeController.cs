@@ -17,7 +17,7 @@ namespace DongHoCasio.Controllers
         {
             ViewBag.SanPhamMoi = db.SanPhams.OrderByDescending(x => x.NgayThem).Take(4).ToList();
             ViewBag.SanPhamBanChay = db.SanPhams.OrderByDescending(x => x.SoLuongBan).Take(4).ToList();
-
+            ViewBag.SanPhamKhuyenMai = db.SanPhams.OrderByDescending(x => x.SoLuongKho).Take(4).ToList();
             return View();
         }
         public ActionResult SanPhamBanChay()
@@ -31,6 +31,13 @@ namespace DongHoCasio.Controllers
         public ActionResult SanPhamMoi()
         {
             ViewBag.TrangSanPhamMoi = db.SanPhams.OrderByDescending(x => x.NgayThem).Take(100).ToList();
+
+            return View();
+        }
+
+        public ActionResult SanPhamKhuyenMai()
+        {
+            ViewBag.SanPhamKhuyenMai = db.SanPhams.OrderByDescending(x => x.SoLuongKho).Take(100).ToList();
 
             return View();
         }
@@ -50,6 +57,21 @@ namespace DongHoCasio.Controllers
             return View(sanPham);
         }
 
+        public ActionResult DetailsKhuyenMai(string id)
+        {
+            //Tim san pham cos ma sp =id
+            // SanPham sp = db.SanPhams.SingleOrDefault(x => x.MaSP == id);
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            SanPham sanPham = db.SanPhams.Find(id);
+            if (sanPham == null)
+            {
+                return HttpNotFound();
+            }
+            return View(sanPham);
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

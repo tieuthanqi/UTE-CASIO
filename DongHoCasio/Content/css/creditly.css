@@ -13,12 +13,14 @@
     border-top-color: #ff5c61;
     border: 1px solid #ff7076;
 }
+
+
 .creditly-wrapper label {
-    display: inline-block;
-    margin-bottom: 10px;
-    font-weight: 500;
-    color:#212121;
-    font-size:1.2em;
+	display: inline-block;
+	margin-bottom: 10px;
+	font-weight: 500;
+	color: #212121;
+	font-size: 1.2em;
 }
 .creditly-wrapper .form-group {
   width: 100%;

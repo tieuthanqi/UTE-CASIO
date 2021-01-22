@@ -20,6 +20,12 @@ namespace DongHoCasio
                namespaces: new string[] { "DongHoCasio.Controllers" }
            );
             routes.MapRoute(
+               name: "CartKhuyenMai",
+               url: "gio-hang-khuyen-mai",
+               defaults: new { controller = "CartKhuyenMai", action = "IndexKhuyenMai", id = UrlParameter.Optional },
+               namespaces: new string[] { "DongHoCasio.Controllers" }
+           );
+            routes.MapRoute(
                name: "dang nhap",
                url: "dang-nhap",
                defaults: new { controller = "Home", action = "Login", id = UrlParameter.Optional },

@@ -19,12 +19,17 @@ h1,h2,h3,h4,h5,h6,a{
 	font-family:'Ubuntu', sans-serif !important;
 	margin:0;
 }
+strong {
+	font-weight: bold;
+	text-decoration: line-through;
+}
+
 ul,label{
 	margin:0;
 	padding:0;
 }
-body a:hover{
-	text-decoration:none;
+body a:hover {
+	text-decoration: none;
 }
 /*-- header --*/
 .fixed{
@@ -47,9 +52,11 @@ span.glyphicon.glyphicon-shopping-cart.my-cart-icon.my-cart-icon-affix {
     width: 850px;
 	margin:75px auto 30px;
 }
+
+
 .snipcart-thumb a {
-    display: block;
-    text-align: center;
+	display: block;
+	text-align: center;
 }
 .my-cart-icon-affix i {
     background: #84C639 !important;
@@ -59,12 +66,12 @@ span.glyphicon.glyphicon-shopping-cart.my-cart-icon.my-cart-icon-affix {
     display: block;
 }
 i.badge.badge-notify.my-cart-badge {
-    font-style: normal;
-    background: #FA1818;
-    font-size: 14px;
-    position: absolute;
-    top: -10px;
-    right:-22px;
+	font-style: normal;
+	background: #FA1818;
+	font-size: 14px;
+	position: absolute;
+	top: -10px;
+	right: -22px;
 }
 .product_list_header span {
     font-size: 1em;

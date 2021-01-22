@@ -26,6 +26,8 @@
 	box-sizing: border-box;
 	font-size:13px;
 }
+
+
 .fontawesome-icon-list a i {
     margin-right:10px;
     font-size:25px;
@@ -765,7 +767,8 @@
   content: "\f0cb";
 }
 .fa-strikethrough:before {
-  content: "\f0cc";
+    content: "\f0cc";
+    text-decoration: line-through;
 }
 .fa-underline:before {
   content: "\f0cd";

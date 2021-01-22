@@ -33,6 +33,8 @@ namespace DongHoCasio.Controllers
             
             return View(list);
         }
+
+        
         public JsonResult Update(string cartModel)
         {
             var jsonCart = new JavaScriptSerializer().Deserialize<List<CartItem>>(cartModel);
@@ -163,6 +165,7 @@ namespace DongHoCasio.Controllers
             return Redirect("/hoan-thanh");
 
         }
+
 
         public ActionResult HoanThanh()
         {
