@@ -2,7 +2,6 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var tongtien = ViewBag.TongTien;
 }
 @section jsFooter{
     <script src="/Content/js/controller/cartController.js"></script>
@@ -30,7 +29,7 @@
             <tr>
                 <td><img src="@Url.Content(item.SanPham.Hinh)" style="height:100px; width:100px;margin:5px" alt="Chua co Anh" /></td>
                 <td>@item.SanPham.MaSP</td>
-                <td><input type="text" class="txtSoLuong" data-id="@item.SanPham.MaSP" value="@item.SoLuong" /></td>
+                <td><input type="text" class="txtSoLuong" data-id="@item.SanPham.MaSP" value="@item.SoLuong" style="" /><button id="btnUpdate" class="btn "><i class="fa fa-pencil"></i></button></td>
                 <td>@item.SanPham.Gia.ToString("N0")</td>
                 <td>@((item.SanPham.Gia * item.SoLuong).ToString("N0"))</td>
                 <td><a href="#" data-id="@item.SanPham.MaSP" class="btn-delete">Xóa</a></td>
@@ -42,11 +41,10 @@
         </tbody>
     </table>
 
-        <button id="btnContinue" class="btn ">Tiếp tục mua hàng</button>
-        <button id="btnUpdate" class="btn ">Cập nhật giỏ hàng</button>
-        <button id="btnDeleteAll" class="btn ">Xóa giỏ hàng</button>
-        <button id="btnPayment" class="btn ">Thanh toán</button>
-        <button type="button" name="tongtien" class="btn">@tongtien  </button>
+        <button id="btnContinue" class="btn  btn-custome btn-outline-info btn-lg btn-sm">Tiếp tục mua hàng</button> 
+        <button id="btnDeleteAll" class="btn btn-danger btn-custome">Xóa giỏ hàng</button>
+        <button id="btnPayment" class="btn btn-primary btn-danger">Thanh toán</button>
+        @*<button type="button" name="tongtien" class="btn">@tongtien  </button>*@
     }
     else
     {

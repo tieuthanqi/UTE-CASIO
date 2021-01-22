@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DongHoCasio", "DongHoCasio\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DongHoCasio.Model", "DongHoCasio.Model\DongHoCasio.Model.csproj", "{6B2B5E5F-1790-4285-97B8-888C09F8ED4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{EEC63275-5BE7-4D3E-B1FC-096A6FA158A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6B2B5E5F-1790-4285-97B8-888C09F8ED4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B2B5E5F-1790-4285-97B8-888C09F8ED4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B2B5E5F-1790-4285-97B8-888C09F8ED4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEC63275-5BE7-4D3E-B1FC-096A6FA158A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEC63275-5BE7-4D3E-B1FC-096A6FA158A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEC63275-5BE7-4D3E-B1FC-096A6FA158A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEC63275-5BE7-4D3E-B1FC-096A6FA158A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

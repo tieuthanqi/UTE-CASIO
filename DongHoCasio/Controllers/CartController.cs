@@ -1,8 +1,10 @@
-﻿using DongHoCasio.Class;
+﻿using Common;
+using DongHoCasio.Class;
 using DongHoCasio.Model;
 using DongHoCasio.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -139,6 +141,7 @@ namespace DongHoCasio.Controllers
             {
                 tongTien += item.SoLuong * (int)item.SanPham.Gia;
             }
+            string ct = "Sản Phẩm       Số Lượng  \n";
             DonHang donHang = new DonHang();
             donHang.UserName = Session["username"].ToString();
             donHang.NgayMua = DateTime.Now;
@@ -158,8 +161,24 @@ namespace DongHoCasio.Controllers
                 chiTiet.Gia = item.SanPham.Gia;
                 chiTiet.SoLuong = item.SoLuong;
                 chiTietDAO.Insert(chiTiet);
+
+                ct += item.SanPham.MaSP +"    " +item.SoLuong + "\n";
+               
             }
+            
            
+
+            string content = System.IO.File.ReadAllText(Server.MapPath("/GuiEmail/neworder.html"));
+            content = content.Replace("{{UserName}}", Session["username"].ToString());
+            content = content.Replace("{{Phone}}", SDT);
+            content = content.Replace("{{Email}}", Email);
+            content = content.Replace("{{Address}}", DiaChi);
+            content = content.Replace("{{Total}}", tongTien.ToString("N0"));
+            content = content.Replace( "{{chitiet}}", ct);
+            var toEmail = ConfigurationManager.AppSettings["ToEmailAddress"].ToString();
+
+            new MailHelper().SendMail(Email, "Đơn hàng mới từ Shop UTE-CASIO", content);
+            new MailHelper().SendMail(toEmail, "Đơn hàng mới từ Shop UTE-CASIO", content);
             return Redirect("/hoan-thanh");
 
         }

@@ -202,3 +202,5 @@ C:\Users\DELL\source\repos\tieuthanqi\UTE-CASIO\DongHoCasio\obj\Debug\DongHoCasi
 C:\Users\DELL\source\repos\tieuthanqi\UTE-CASIO\DongHoCasio\obj\Debug\DongHoCasio.csproj.CopyComplete
 C:\Users\DELL\source\repos\tieuthanqi\UTE-CASIO\DongHoCasio\obj\Debug\DongHoCasio.dll
 C:\Users\DELL\source\repos\tieuthanqi\UTE-CASIO\DongHoCasio\obj\Debug\DongHoCasio.pdb
+C:\Users\DELL\source\repos\tieuthanqi\UTE-CASIO\DongHoCasio\bin\Common.dll
+C:\Users\DELL\source\repos\tieuthanqi\UTE-CASIO\DongHoCasio\bin\Common.pdb

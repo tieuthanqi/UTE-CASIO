@@ -23,10 +23,8 @@ namespace DongHoCasio.Controllers
             if (user != null && user.Allowed == 1)
             {
                 Session["username"] = user.UserName;
-
                 ViewBag.username = user.UserName;
                 return Redirect("/Admin/HomeAdmin/Index");
-
             }
             else if ( user != null && user.Allowed ==0)
             {

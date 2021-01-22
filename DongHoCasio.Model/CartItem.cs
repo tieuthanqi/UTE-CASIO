@@ -10,7 +10,7 @@ namespace DongHoCasio.Model
     [Serializable]
     public class CartItem
     {
-        [StringLength(30)]
+        
         public SanPham SanPham { get; set; }
 
         public int SoLuong { get; set; }

@@ -3688,6 +3688,7 @@
     <Content Include="Areas\Admin\Contents\vendors\validator\validator.js" />
     <Content Include="Areas\Admin\Contents\css\style.css" />
     <Content Include="Areas\Admin\Scripts\scripts.js" />
+    <Content Include="GuiEmail\neworder.html" />
     <Content Include="Content\back-end\fonts\fa-solid-900.svg" />
     <Content Include="Content\back-end\fonts\Pe-icon-7-stroke.svg" />
     <Content Include="Content\back-end\images\avatars\1.jpg" />
@@ -4738,8 +4739,7 @@
     <Content Include="Views\Cart\ThanhToan.cshtml" />
     <Content Include="Views\Cart\HoanThanh.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Shared\_LayoutPage.cshtml" />
-    <Content Include="Views\Account\SingUp.cshtml" />
+    <Content Include="Views\Shared\.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4761,6 +4761,10 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{eec63275-5be7-4d3e-b1fc-096a6fa158a5}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DongHoCasio.Model\DongHoCasio.Model.csproj">
       <Project>{6b2b5e5f-1790-4285-97b8-888c09f8ed4f}</Project>
       <Name>DongHoCasio.Model</Name>
