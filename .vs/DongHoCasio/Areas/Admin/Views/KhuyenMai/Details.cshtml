@@ -1,0 +1,52 @@
+﻿@model DongHoCasio.Model.KhuyenMai
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KhuyenMai</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaKM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaKM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenCTKM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenCTKM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThoiGianBD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThoiGianBD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThoiGianKT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThoiGianKT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaKM }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
